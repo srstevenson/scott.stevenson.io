@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+<!-- prettier-ignore -->
+{% block content %}
+<main>
+  <article>
+    <h2>{{ page.title }}</h2>
+    <time datetime="{{ page.date | date }}"
+      >{{ page.date | date(format="%B %Y") }}</time
+    >
+    {{ page.content | safe }}
+  </article>
+</main>
+{% endblock %}

@@ -1,0 +1,10 @@
+base_url = "https://scott.stevenson.io"
+title = "Scott Stevenson"
+description = "Scott Stevenson’s website"
+highlight_code = true
+highlight_theme = "ir-white"
+generate_feed = true
+compile_sass = true
+build_search_index = false
+
+[extra]
