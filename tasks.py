@@ -32,11 +32,8 @@ def purge_cache() -> None:
 def deploy(ctx, prod=False, open=False):
     """Build and deploy the site."""
     ctx.run("zola check")
-
     ctx.run("zola build")
-
-    ctx.run("fd . public -e html -x htmlmin -c {} {}")
-
+    ctx.run(r"find public -name '*.html' -exec htmlmin -c {} {} \;")
     revision = git_describe()
     command = f"netlify deploy -m 'revision {revision}'"
     if prod:
@@ -44,6 +41,5 @@ def deploy(ctx, prod=False, open=False):
     if open:
         command += " --open"
     ctx.run(command)
-
     if prod:
         purge_cache()
