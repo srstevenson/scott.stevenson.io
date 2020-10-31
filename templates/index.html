@@ -5,6 +5,9 @@
   {% for page in section.pages %}
   <section>
     <h2><a href="{{ page.path | safe }}">{{ page.title }}</a></h2>
+    <time datetime="{{ page.date | date }}"
+      >{{ page.date | date(format="%B %Y") }}</time
+    >
     {{ page.summary | safe }}
     <p><a href="{{ page.path | safe }}">Continue reading &rarr;</a></p>
   </section>
