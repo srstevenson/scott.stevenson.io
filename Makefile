@@ -1,5 +1,8 @@
 all: build
 
+fmt:
+	prettier -w content sass static templates
+
 build:
 	zola check
 	zola build
@@ -11,4 +14,4 @@ deploy: build
 clean:
 	$(RM) -r public
 
-.PHONY: build deploy clean
+.PHONY: fmt build deploy clean
