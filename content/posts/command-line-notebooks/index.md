@@ -70,7 +70,7 @@ to standard output.
 standard error and the notebook body to standard output, so we can filter out
 the header by redirecting standard error.
 
-```
+```bash
 jupyter nbconvert --stdout --to markdown JAX_Quickstart.ipynb 2>/dev/null
 ```
 
@@ -87,7 +87,7 @@ As we’re piping text to `pygmentize` on standard input, there’s no filename 
 which to determine the language of the input so we specify it using the `-l`
 flag.
 
-```
+```bash
 jupyter nbconvert --stdout --to markdown JAX_Quickstart.ipynb 2>/dev/null \
     | pygmentize -l md
 ```
@@ -95,7 +95,7 @@ jupyter nbconvert --stdout --to markdown JAX_Quickstart.ipynb 2>/dev/null \
 We can pipe the output of `pygmentize` to a pager like `less` to scroll through
 and search within the notebook.
 
-```
+```bash
 jupyter nbconvert --stdout --to markdown JAX_Quickstart.ipynb 2>/dev/null \
     | pygmentize -l md | less -R
 ```
