@@ -119,7 +119,7 @@ time {
   }
 }
 
-@media screen and (min-width: 499px) {
+@media (min-width: 499px) {
   header {
     align-items: baseline;
     justify-content: space-between;
