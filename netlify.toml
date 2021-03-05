@@ -5,7 +5,7 @@ publish = "public/"
 for = "/*"
 
 [headers.values]
-Content-Security-Policy = "default-src 'none'; img-src 'self'; style-src 'self' 'unsafe-inline'"
+Content-Security-Policy = "default-src 'none'; img-src 'self'; style-src 'self'"
 Referrer-Policy = "no-referrer"
 Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 X-Content-Type-Options = "nosniff"
