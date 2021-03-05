@@ -20,7 +20,7 @@
   </head>
   <body>
     <header>
-      <h1><a href="/">Scott Stevenson</a></h1>
+      <h2><a href="/">{{ config.title }}</a></h2>
       <nav>
         <ul>
           <li><a href="https://github.com/srstevenson" rel="me">GitHub</a></li>
@@ -29,7 +29,7 @@
     </header>
     <!-- prettier-ignore -->
     {% block content %}
-    {% endblock %}
+    {% endblock content %}
     <footer><a href="/">Home</a></footer>
   </body>
 </html>

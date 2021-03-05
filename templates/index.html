@@ -2,6 +2,8 @@
 <!-- prettier-ignore -->
 {% block content %}
 <main>
+  <!-- prettier-ignore -->
+  {% set section = get_section(path="posts/_index.md") %}
   {% for page in section.pages %}
   <section>
     <h2><a href="{{ page.path | safe }}">{{ page.title }}</a></h2>
@@ -15,4 +17,4 @@
   </section>
   {% endfor %}
 </main>
-{% endblock %}
+{% endblock content %}
