@@ -2,7 +2,7 @@
   --body-background: #fff;
   --body-color: #333;
   --time-color: #555;
-  --a-color: #2d5b89;
+  --highlight-color: #2d5b89;
   --pre-background: #f8f8f8;
 }
 
@@ -11,7 +11,7 @@
     --body-background: #1b1b1b;
     --body-color: #bbb;
     --time-color: #999;
-    --a-color: #6389a7;
+    --highlight-color: #6389a7;
     --pre-background: #1f1f1f;
   }
 }
@@ -91,12 +91,13 @@ pre {
 
 pre {
   background: var(--pre-background);
+  border-left: 2px solid var(--highlight-color);
   overflow-x: auto;
   padding: 1rem;
 }
 
 a {
-  color: var(--a-color);
+  color: var(--highlight-color);
   text-decoration: none;
 
   &:hover {
