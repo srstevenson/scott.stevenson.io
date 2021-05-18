@@ -1,18 +1,18 @@
 :root {
-  --body-background: #fff;
-  --body-color: #333;
-  --time-color: #555;
-  --highlight-color: #2d5b89;
-  --pre-background: #f8f8f8;
+  --body-bg: #fff;
+  --body-fg: #333;
+  --time-fg: #555;
+  --highlight-fg: #2d5b89;
+  --pre-bg: #f8f8f8;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-background: #1b1b1b;
-    --body-color: #bbb;
-    --time-color: #999;
-    --highlight-color: #6389a7;
-    --pre-background: #1f1f1f;
+    --body-bg: #1b1b1b;
+    --body-fg: #bbb;
+    --time-fg: #999;
+    --highlight-fg: #6389a7;
+    --pre-bg: #1f1f1f;
   }
 }
 
@@ -21,8 +21,8 @@ html {
 }
 
 body {
-  background: var(--body-background);
-  color: var(--body-color);
+  background: var(--body-bg);
+  color: var(--body-fg);
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -90,14 +90,14 @@ pre {
 }
 
 pre {
-  background: var(--pre-background);
-  border-left: 2px solid var(--highlight-color);
+  background: var(--pre-bg);
+  border-left: 2px solid var(--highlight-fg);
   overflow-x: auto;
   padding: 1rem;
 }
 
 a {
-  color: var(--highlight-color);
+  color: var(--highlight-fg);
   text-decoration: none;
 
   &:hover {
@@ -106,7 +106,7 @@ a {
 }
 
 time {
-  color: var(--time-color);
+  color: var(--time-fg);
 }
 
 @media screen and (max-width: 498px) {
