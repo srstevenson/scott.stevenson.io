@@ -119,23 +119,19 @@ time {
 }
 
 @media screen and (max-width: 498px) {
-  header {
-    div {
-      flex-direction: column;
-      text-align: center;
+  header div {
+    flex-direction: column;
+    text-align: center;
 
-      h2 {
-        margin-bottom: 0;
-      }
+    h2 {
+      margin-bottom: 0;
     }
   }
 }
 
 @media (min-width: 499px) {
-  header {
-    div {
-      align-items: baseline;
-      justify-content: space-between;
-    }
+  header div {
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
