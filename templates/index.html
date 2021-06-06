@@ -2,19 +2,21 @@
 <!-- prettier-ignore -->
 {% block content %}
 <main>
-  <!-- prettier-ignore -->
-  {% set section = get_section(path="posts/_index.md") %}
-  {% for page in section.pages %}
-  <section>
-    <h2><a href="{{ page.path | safe }}">{{ page.title }}</a></h2>
-    <p>
-      <time datetime="{{ page.date | date }}"
-        >{{ page.date | date(format="%B %Y") }}</time
-      >
-    </p>
-    {{ page.summary | safe }}
-    <p><a href="{{ page.path | safe }}">Continue reading &rarr;</a></p>
-  </section>
-  {% endfor %}
+  <div class="container">
+    <!-- prettier-ignore -->
+    {% set section = get_section(path="posts/_index.md") %}
+    {% for page in section.pages %}
+    <section>
+      <h2><a href="{{ page.path | safe }}">{{ page.title }}</a></h2>
+      <p>
+        <time datetime="{{ page.date | date }}"
+          >{{ page.date | date(format="%B %Y") }}</time
+        >
+      </p>
+      {{ page.summary | safe }}
+      <p><a href="{{ page.path | safe }}">Continue reading &rarr;</a></p>
+    </section>
+    {% endfor %}
+  </div>
 </main>
 {% endblock content %}

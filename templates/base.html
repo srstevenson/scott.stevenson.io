@@ -20,16 +20,24 @@
   </head>
   <body>
     <header>
-      <h2><a href="/">{{ config.title }}</a></h2>
-      <nav>
-        <ul>
-          <li><a href="https://github.com/srstevenson" rel="me">GitHub</a></li>
-        </ul>
-      </nav>
+      <div class="container">
+        <h2><a href="/">{{ config.title }}</a></h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="https://github.com/srstevenson" rel="me">GitHub</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!-- prettier-ignore -->
     {% block content %}
     {% endblock content %}
-    <footer><a href="/">Home</a></footer>
+    <footer>
+      <div class="container">
+        <a href="/">Home</a>
+      </div>
+    </footer>
   </body>
 </html>

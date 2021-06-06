@@ -2,14 +2,16 @@
 <!-- prettier-ignore -->
 {% block content %}
 <main>
-  <article>
-    <h2>{{ page.title }}</h2>
-    <p>
-      <time datetime="{{ page.date | date }}"
-        >{{ page.date | date(format="%B %Y") }}</time
-      >
-    </p>
-    {{ page.content | safe }}
-  </article>
+  <div class="container">
+    <article>
+      <h2>{{ page.title }}</h2>
+      <p>
+        <time datetime="{{ page.date | date }}"
+          >{{ page.date | date(format="%B %Y") }}</time
+        >
+      </p>
+      {{ page.content | safe }}
+    </article>
+  </div>
 </main>
 {% endblock content %}

@@ -2,8 +2,8 @@
   --body-bg: #fff;
   --body-fg: #333;
   --time-fg: #555;
+  --element-bg: #f8f8f8;
   --highlight-fg: #2d5b89;
-  --pre-bg: #f8f8f8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,8 +11,8 @@
     --body-bg: #1b1b1b;
     --body-fg: #bbb;
     --time-fg: #999;
+    --element-bg: #1f1f1f;
     --highlight-fg: #6389a7;
-    --pre-bg: #1f1f1f;
   }
 }
 
@@ -27,9 +27,13 @@ body {
   flex-direction: column;
   font-size: 16px;
   line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
   margin: auto;
   max-width: 42rem;
-  min-height: 100vh;
   padding: 0 1rem;
 }
 
@@ -47,25 +51,29 @@ h2 ~ p {
 }
 
 header {
-  display: flex;
+  background: var(--element-bg);
 
-  h2 {
-    font-size: 1.2rem;
-  }
+  div {
+    display: flex;
 
-  nav {
-    ul {
-      padding-left: 0;
+    h2 {
+      font-size: 1.2rem;
+    }
 
-      li {
-        display: inline;
+    nav {
+      ul {
+        padding-left: 0;
 
-        &:not(:first-child) {
-          margin-left: 0.4rem;
-        }
+        li {
+          display: inline;
 
-        &:not(:last-child) {
-          margin-right: 0.4rem;
+          &:not(:first-child) {
+            margin-left: 0.4rem;
+          }
+
+          &:not(:last-child) {
+            margin-right: 0.4rem;
+          }
         }
       }
     }
@@ -73,6 +81,7 @@ header {
 }
 
 footer {
+  background: var(--element-bg);
   padding: 2rem 0;
   text-align: center;
 }
@@ -90,7 +99,7 @@ pre {
 }
 
 pre {
-  background: var(--pre-bg);
+  background: var(--element-bg);
   border-left: 2px solid var(--highlight-fg);
   overflow-x: auto;
   padding: 1rem;
@@ -111,18 +120,22 @@ time {
 
 @media screen and (max-width: 498px) {
   header {
-    flex-direction: column;
-    text-align: center;
+    div {
+      flex-direction: column;
+      text-align: center;
 
-    h2 {
-      margin-bottom: 0;
+      h2 {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
 @media (min-width: 499px) {
   header {
-    align-items: baseline;
-    justify-content: space-between;
+    div {
+      align-items: baseline;
+      justify-content: space-between;
+    }
   }
 }
