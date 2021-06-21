@@ -5,11 +5,14 @@
   <div class="container">
     <article>
       <h2>{{ page.title }}</h2>
+      {% if page.date %}
       <p>
         <time datetime="{{ page.date | date }}"
           >{{ page.date | date(format="%B %Y") }}</time
         >
       </p>
+      {% endif %}
+      <!-- prettier-ignore -->
       {{ page.content | safe }}
     </article>
   </div>
