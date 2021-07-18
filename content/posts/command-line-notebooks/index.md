@@ -3,13 +3,13 @@ title = "Viewing Jupyter notebooks at the command line"
 date = 2020-09-23
 +++
 
-The Jupyter notebook is a literate programming environment which has become
-ubiquitous in scientific computing. While the standard tools for interacting
-with notebooks are web applications, it’s often useful to be able to view
-notebooks at the command line. I find this convenient when logged into a remote
-machine via SSH, and the process of configuring SSH to forward a port, starting
-a Jupyter server, and navigating to it in a web browser is a chore just to view
-a notebook for a few seconds.
+The [Jupyter notebook][jupyter] is a literate programming environment which has
+become ubiquitous in scientific computing. While the standard tools for
+interacting with notebooks are web applications, it’s often useful to be able to
+view notebooks at the command line. I find this convenient when logged into a
+remote machine via SSH, and the process of configuring SSH to forward a port,
+starting a Jupyter server, and navigating to it in a web browser is a chore just
+to view a notebook for a few seconds.
 
 <!-- more -->
 
@@ -158,6 +158,7 @@ forwarding, Jupyter server, or web browser required.
 
 [commonmark]: https://commonmark.org/
 [jax docs]: https://jax.readthedocs.io/en/latest/notebooks/quickstart.html
+[jupyter]: https://jupyter.org/
 [nbconvert]: https://nbconvert.readthedocs.io/
 [notebook schema]:
   https://github.com/jupyter/nbformat/blob/3af03b7804357d967aa035d677c5be64c8a86680/nbformat/v4/nbformat.v4.schema.json
