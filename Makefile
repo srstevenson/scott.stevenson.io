@@ -1,6 +1,6 @@
 all: build
 
-fmt:
+format:
 	prettier -w content sass static templates
 
 build:
@@ -14,4 +14,4 @@ deploy: build
 clean:
 	$(RM) -r public
 
-.PHONY: fmt build deploy clean
+.PHONY: format build deploy clean
