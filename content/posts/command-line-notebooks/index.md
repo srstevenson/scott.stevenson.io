@@ -27,8 +27,8 @@ backslash-escaped, making copying code from the output laborious.
 Instead of printing the notebook file directly to the terminal, we’ll convert it
 to another format first. [`nbconvert`][nbconvert] is a program to convert
 notebooks to rich formats including HTML and PDF, as well as plain text such as
-[Markdown]. By design, Markdown syntax is unobtrusive and readable in plain text
-without rendering, so it’s a good choice for our output format.
+[Markdown][commonmark]. By design, Markdown syntax is unobtrusive and readable
+in plain text without rendering, so it’s a good choice for our output format.
 
 As an example, we’ll use a notebook which contains both prose and code cells
 taken from the [documentation for JAX][jax docs].
@@ -156,8 +156,8 @@ example as `nbless`, next time we’re at the command line on a remote machine a
 want to view a notebook it’s as simple as `nbless notebook.ipynb`—no port
 forwarding, Jupyter server, or web browser required.
 
+[commonmark]: https://commonmark.org/
 [jax docs]: https://jax.readthedocs.io/en/latest/notebooks/quickstart.html
-[markdown]: https://daringfireball.net/projects/markdown/syntax
 [nbconvert]: https://nbconvert.readthedocs.io/
 [notebook schema]:
   https://github.com/jupyter/nbformat/blob/3af03b7804357d967aa035d677c5be64c8a86680/nbformat/v4/nbformat.v4.schema.json
