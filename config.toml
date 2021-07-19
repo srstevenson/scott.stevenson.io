@@ -6,5 +6,10 @@ compile_sass = true
 build_search_index = false
 
 [markdown]
-highlight_code = false
 smart_punctuation = true
+highlight_code = true
+highlight_theme = "css"
+highlight_themes_css = [
+   { theme = "ir-white", filename = "syntax-light.css" },
+   { theme = "visual-studio-dark", filename = "syntax-dark.css" },
+ ]

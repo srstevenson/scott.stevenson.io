@@ -6,7 +6,9 @@ format:
 build:
 	zola check
 	zola build
-	find public -name "*.html" -exec htmlmin -c {} {} \;
+	find public -type f -name "*.html" -exec htmlmin -c {} {} \;
+	cleancss -o public/index.css public/index.css
+	$(RM) public/syntax-*.css  # Inlined by cleancss.
 
 deploy: build
 	netlify deploy --prod

@@ -1,3 +1,6 @@
+@import url("syntax-dark.css") (prefers-color-scheme: dark);
+@import url("syntax-light.css") (prefers-color-scheme: light);
+
 :root {
   --body-bg: #fff;
   --body-fg: #333;
@@ -99,7 +102,7 @@ pre {
 }
 
 pre {
-  background: var(--element-bg);
+  background: var(--element-bg) !important;
   border-left: 2px solid var(--highlight-fg);
   overflow-x: auto;
   padding: 1rem;
